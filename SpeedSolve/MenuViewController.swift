@@ -7,25 +7,58 @@
 
 import UIKit
 
-class MenuViewController: UIViewController, UINavigationControllerDelegate {
-    
 
+
+let defaults = UserDefaults.standard
+
+class MenuViewController: UIViewController, UINavigationControllerDelegate, canRecieve{
+    func passDataBack(highScore: Int, currentScore: Int, totalSolved: Int) {
+        topScore = highScore
+        scoreCurrent = currentScore
+        completed = totalSolved
+        
+        defaults.set(topScore, forKey: highScoreKey)
+        defaults.set(scoreCurrent, forKey: currentScoreKey)
+        defaults.set(completed, forKey: completedKey)
+        
+        highScoreLabel.text = "\(topScore)"
+        currentStreakLabel.text = "\(scoreCurrent)"
+        completedLabel.text = "\(completed)"
+    }
+    
+    @IBOutlet weak var highScoreLabel: UILabel!
+    @IBOutlet weak var currentStreakLabel: UILabel!
+    @IBOutlet weak var completedLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        let Defaults = UserDefaults.standard
+        topScore = Defaults.integer(forKey: highScoreKey)
+        highScoreLabel.text = "\(topScore)"
         
-
-        // Do any additional setup after loading the view.
+        scoreCurrent = Defaults.integer(forKey: currentScoreKey)
+        currentStreakLabel.text = "\(scoreCurrent)"
+        
+        completed = Defaults.integer(forKey: completedKey)
+        completedLabel.text = "\(completed)"
+        
+    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "playGame"{
+            let vc = segue.destination as! SpeedSolveViewController
+            vc.highScore = topScore
+            vc.currentScore = scoreCurrent
+            vc.totalSolved = completed
+            vc.delegate = self
+        }
     }
     
+    let highScoreKey = "highScoreKey"
+    var topScore = 0
 
-    /*
-    // MARK: - Navigation
+    let currentScoreKey = "currentScoreKey"
+    var scoreCurrent = 0
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+    let completedKey = "completedKey"
+    var completed = 0
 }

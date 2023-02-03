@@ -1028,7 +1028,7 @@
         <!--MainMenu-->
         <scene sceneID="fK3-IH-GQJ">
             <objects>
-                <viewController title="MainMenu" wantsFullScreenLayout="YES" id="wqp-sO-lc3" customClass="MenuViewController" customModule="SpeedSolve" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="MainMenu" wantsFullScreenLayout="YES" modalTransitionStyle="crossDissolve" id="wqp-sO-lc3" customClass="MenuViewController" customModule="SpeedSolve" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="cfv-jD-dxK">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1119,7 +1119,7 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Average time taken:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WMh-fh-1aS">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WMh-fh-1aS">
                                         <rect key="frame" x="0.0" y="365" width="365" height="25"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="25" id="WAU-ph-eGh"/>
@@ -1137,7 +1137,7 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="bD2-S1-3mS" userLabel="Labels">
-                                <rect key="frame" x="0.0" y="91" width="375" height="440"/>
+                                <rect key="frame" x="0.0" y="91" width="375" height="490"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Maf-xm-5Na" userLabel="BLANK SS">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
@@ -1175,7 +1175,7 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="15" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vcj-ef-ic9">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vcj-ef-ic9">
                                         <rect key="frame" x="0.0" y="190" width="375" height="50"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="NMG-8m-gyk"/>
@@ -1202,7 +1202,7 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R00-M7-09P">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R00-M7-09P">
                                         <rect key="frame" x="0.0" y="290" width="375" height="50"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="8a7-y1-kwx"/>
@@ -1220,7 +1220,7 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Average time taken:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B8Q-SN-zJP">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total Completed:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B8Q-SN-zJP">
                                         <rect key="frame" x="0.0" y="365" width="375" height="25"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="25" id="MMk-Dx-qx8"/>
@@ -1229,10 +1229,19 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xy7-wQ-7Ys">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xy7-wQ-7Ys">
                                         <rect key="frame" x="0.0" y="390" width="375" height="50"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="zYm-s3-IUT"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Verdana-Bold" family="Verdana" pointSize="16"/>
+                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qxe-o3-9fc">
+                                        <rect key="frame" x="0.0" y="440" width="375" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="VQq-If-ZTB"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="Verdana-Bold" family="Verdana" pointSize="16"/>
                                         <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1259,7 +1268,7 @@
                                     <color key="baseBackgroundColor" systemColor="systemBackgroundColor"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <segue destination="BYZ-38-t0r" kind="show" id="Zns-E7-naO"/>
+                                    <segue destination="BYZ-38-t0r" kind="show" identifier="playGame" id="Zns-E7-naO"/>
                                 </connections>
                             </button>
                             <button opaque="NO" alpha="0.5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nTX-8L-1Dd">
@@ -1307,6 +1316,11 @@
                     <navigationItem key="navigationItem" id="uFb-Ej-0Hi">
                         <barButtonItem key="backBarButtonItem" title=" " id="7eI-Lu-YkU"/>
                     </navigationItem>
+                    <connections>
+                        <outlet property="completedLabel" destination="Xy7-wQ-7Ys" id="9ql-7E-FnI"/>
+                        <outlet property="currentStreakLabel" destination="R00-M7-09P" id="EQ5-GD-9VS"/>
+                        <outlet property="highScoreLabel" destination="vcj-ef-ic9" id="Tu5-VK-rl1"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JoW-8q-hMQ" propertyAccessControl="all" sceneMemberID="firstResponder"/>
             </objects>

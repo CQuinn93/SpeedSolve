@@ -7,6 +7,11 @@
 
 import UIKit
 
+protocol canRecieve {
+    
+    func passDataBack(highScore: Int, currentScore: Int, totalSolved: Int)
+}
+
 class SpeedSolveViewController: UIViewController {
     
     @IBOutlet weak var startUpButton: UIButton!
@@ -108,7 +113,7 @@ class SpeedSolveViewController: UIViewController {
     
     //    Settng up the timers
     //    These variables will be used at the start to count the user in before it starts
-    var startInt = 5
+    var startInt = 3
     var startTimer = Timer()
     
     //    These variables will be used while your are trying to complete the word. 3 minutes (180 seconds) will be on the timer
@@ -119,11 +124,17 @@ class SpeedSolveViewController: UIViewController {
     var timeTakenTimer = Timer()
     var finalTime = String()
     
+    var highScore = 0
+    var currentScore = 0
+    var totalSolved = 0
+    
+    var delegate: canRecieve?
+    var defaults = UserDefaults.standard
+    
     // ----------------------------- Application Launch ---------------------------------
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         disableAllbuttons()
         Assigner.GenerateAnswerAndGoal()
         defaultGoalLetters()
@@ -131,9 +142,15 @@ class SpeedSolveViewController: UIViewController {
         defaultmainletters()
         setAlpha(Tries: tries)
         startCounter.alpha = 0
-//        print(Assigner.acceptableword(previousWord: "ROPES", testword: "RIPES"))
-        
-        
+        self.navigationItem.hidesBackButton = true
+        let newBackButton = UIBarButtonItem(title: "Back", style: UIBarButtonItem.Style.plain, target: self, action: #selector(back(sender:)))
+        self.navigationItem.leftBarButtonItem = newBackButton
+    }
+    
+    @objc func back(sender: Any?) {
+        delegate!.passDataBack(highScore: highScore, currentScore: currentScore, totalSolved: totalSolved )
+        dismiss(animated: true, completion: nil)
+        self.navigationController?.popViewController(animated: true)
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any? ) {
         if segue.identifier == "solution" {
@@ -148,7 +165,8 @@ class SpeedSolveViewController: UIViewController {
         }
         else if segue.identifier == "howToPlay" {
         
-        }else if segue.identifier == "complete" {
+        }
+        else if segue.identifier == "complete" {
             let vc = segue.destination as! completeViewController
             vc.startWord = Assigner.startingWord
             vc.guessWord1 = Assigner.attempt1Letters
@@ -377,6 +395,11 @@ class SpeedSolveViewController: UIViewController {
                         startUpButton.isEnabled = true
                         startUpButton.alpha = 1
                         countdownLabel.text = "00:03:00"
+                        currentScore += 1
+                        totalSolved += 1
+                        if currentScore > highScore {
+                            highScore = currentScore
+                        }
                     }else{
                         tries = tries + 1
                         print(tries)
@@ -398,6 +421,7 @@ class SpeedSolveViewController: UIViewController {
                 solutionButton.alpha = 1
                 onboardImage.alpha = 1
                 disableAllbuttons()
+                currentScore = 0
                 
             }
         }
@@ -405,6 +429,7 @@ class SpeedSolveViewController: UIViewController {
     
     // ----------------------------- All Functions ---------------------------------
     
+
     
     func startup() {
         startUpButton.isEnabled = false
@@ -488,7 +513,7 @@ class SpeedSolveViewController: UIViewController {
         if gameInt == 0 {
             gameTimer.invalidate()
             readyLabel.alpha = 1
-            readyLabel.text = "You ran out of time!"
+            readyLabel.text = "Out of time!"
             disableAllbuttons()
             restartButton.alpha = 1
             solutionButton.alpha = 1
@@ -496,6 +521,7 @@ class SpeedSolveViewController: UIViewController {
             restartButton.isEnabled = true
             solutionButton.isEnabled = true
             startUpButton.isEnabled = false
+            currentScore = 0
         }
     }
     func startCounting() {
