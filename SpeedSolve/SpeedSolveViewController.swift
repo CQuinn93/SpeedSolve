@@ -242,126 +242,147 @@ class SpeedSolveViewController: UIViewController {
         let currentLetter = "Y"
         let currentImage = Dictionary.guessRoundedLetterDictionary[currentLetter]
         Assigner.assignLetterstoArrays(Letter: currentLetter, Image: currentImage!, Tries: tries)
+        errorLabel.alpha = 0
         printingLetters()
     }
     @IBAction func U(_ sender: UIButton) {
         let currentLetter = "U"
         let currentImage = Dictionary.guessRoundedLetterDictionary[currentLetter]
         Assigner.assignLetterstoArrays(Letter: currentLetter, Image: currentImage!, Tries: tries)
+        errorLabel.alpha = 0
         printingLetters()
     }
     @IBAction func I(_ sender: UIButton) {
         let currentLetter = "I"
         let currentImage = Dictionary.guessRoundedLetterDictionary[currentLetter]
         Assigner.assignLetterstoArrays(Letter: currentLetter, Image: currentImage!, Tries: tries)
+        errorLabel.alpha = 0
         printingLetters()
     }
     @IBAction func O(_ sender: UIButton) {
         let currentLetter = "O"
         let currentImage = Dictionary.guessRoundedLetterDictionary[currentLetter]
         Assigner.assignLetterstoArrays(Letter: currentLetter, Image: currentImage!, Tries: tries)
+        errorLabel.alpha = 0
         printingLetters()
     }
     @IBAction func P(_ sender: UIButton) {
         let currentLetter = "P"
         let currentImage = Dictionary.guessRoundedLetterDictionary[currentLetter]
         Assigner.assignLetterstoArrays(Letter: currentLetter, Image: currentImage!, Tries: tries)
+        errorLabel.alpha = 0
         printingLetters()
     }
     @IBAction func A(_ sender: UIButton) {
         let currentLetter = "A"
         let currentImage = Dictionary.guessRoundedLetterDictionary[currentLetter]
         Assigner.assignLetterstoArrays(Letter: currentLetter, Image: currentImage!, Tries: tries)
+        errorLabel.alpha = 0
         printingLetters()
     }
     @IBAction func S(_ sender: UIButton) {
         let currentLetter = "S"
         let currentImage = Dictionary.guessRoundedLetterDictionary[currentLetter]
         Assigner.assignLetterstoArrays(Letter: currentLetter, Image: currentImage!, Tries: tries)
+        errorLabel.alpha = 0
         printingLetters()
     }
     @IBAction func D(_ sender: UIButton) {
         let currentLetter = "D"
         let currentImage = Dictionary.guessRoundedLetterDictionary[currentLetter]
         Assigner.assignLetterstoArrays(Letter: currentLetter, Image: currentImage!, Tries: tries)
+        errorLabel.alpha = 0
         printingLetters()
     }
     @IBAction func F(_ sender: UIButton) {
         let currentLetter = "F"
         let currentImage = Dictionary.guessRoundedLetterDictionary[currentLetter]
         Assigner.assignLetterstoArrays(Letter: currentLetter, Image: currentImage!, Tries: tries)
+        errorLabel.alpha = 0
         printingLetters()
     }
     @IBAction func G(_ sender: UIButton) {
         let currentLetter = "G"
         let currentImage = Dictionary.guessRoundedLetterDictionary[currentLetter]
         Assigner.assignLetterstoArrays(Letter: currentLetter, Image: currentImage!, Tries: tries)
+        errorLabel.alpha = 0
         printingLetters()
     }
     @IBAction func H(_ sender: UIButton) {
         let currentLetter = "H"
         let currentImage = Dictionary.guessRoundedLetterDictionary[currentLetter]
         Assigner.assignLetterstoArrays(Letter: currentLetter, Image: currentImage!, Tries: tries)
+        errorLabel.alpha = 0
         printingLetters()
     }
     @IBAction func J(_ sender: UIButton) {
         let currentLetter = "J"
         let currentImage = Dictionary.guessRoundedLetterDictionary[currentLetter]
         Assigner.assignLetterstoArrays(Letter: currentLetter, Image: currentImage!, Tries: tries)
+        errorLabel.alpha = 0
         printingLetters()
     }
     @IBAction func K(_ sender: UIButton) {
         let currentLetter = "K"
         let currentImage = Dictionary.guessRoundedLetterDictionary[currentLetter]
         Assigner.assignLetterstoArrays(Letter: currentLetter, Image: currentImage!, Tries: tries)
+        errorLabel.alpha = 0
         printingLetters()
     }
     @IBAction func L(_ sender: UIButton) {
         let currentLetter = "L"
         let currentImage = Dictionary.guessRoundedLetterDictionary[currentLetter]
         Assigner.assignLetterstoArrays(Letter: currentLetter, Image: currentImage!, Tries: tries)
+        errorLabel.alpha = 0
         printingLetters()
     }
     @IBAction func Z(_ sender: UIButton) {
         let currentLetter = "Z"
         let currentImage = Dictionary.guessRoundedLetterDictionary[currentLetter]
         Assigner.assignLetterstoArrays(Letter: currentLetter, Image: currentImage!, Tries: tries)
+        errorLabel.alpha = 0
         printingLetters()
     }
     @IBAction func X(_ sender: UIButton) {
         let currentLetter = "X"
         let currentImage = Dictionary.guessRoundedLetterDictionary[currentLetter]
         Assigner.assignLetterstoArrays(Letter: currentLetter, Image: currentImage!, Tries: tries)
+        errorLabel.alpha = 0
         printingLetters()
     }
     @IBAction func C(_ sender: UIButton) {
         let currentLetter = "C"
         let currentImage = Dictionary.guessRoundedLetterDictionary[currentLetter]
         Assigner.assignLetterstoArrays(Letter: currentLetter, Image: currentImage!, Tries: tries)
+        errorLabel.alpha = 0
         printingLetters()
     }
     @IBAction func V(_ sender: UIButton) {
         let currentLetter = "V"
         let currentImage = Dictionary.guessRoundedLetterDictionary[currentLetter]
         Assigner.assignLetterstoArrays(Letter: currentLetter, Image: currentImage!, Tries: tries)
+        errorLabel.alpha = 0
         printingLetters()
     }
     @IBAction func B(_ sender: UIButton) {
         let currentLetter = "B"
         let currentImage = Dictionary.guessRoundedLetterDictionary[currentLetter]
         Assigner.assignLetterstoArrays(Letter: currentLetter, Image: currentImage!, Tries: tries)
+        errorLabel.alpha = 0
         printingLetters()
     }
     @IBAction func N(_ sender: UIButton) {
         let currentLetter = "N"
         let currentImage = Dictionary.guessRoundedLetterDictionary[currentLetter]
         Assigner.assignLetterstoArrays(Letter: currentLetter, Image: currentImage!, Tries: tries)
+        errorLabel.alpha = 0
         printingLetters()
     }
     @IBAction func M(_ sender: UIButton) {
         let currentLetter = "M"
         let currentImage = Dictionary.guessRoundedLetterDictionary[currentLetter]
         Assigner.assignLetterstoArrays(Letter: currentLetter, Image: currentImage!, Tries: tries)
+        errorLabel.alpha = 0
         printingLetters()
     }
     @IBAction func DEL(_ sender: UIButton) {
@@ -517,7 +538,7 @@ class SpeedSolveViewController: UIViewController {
             disableAllbuttons()
             restartButton.alpha = 1
             solutionButton.alpha = 1
-            onboardImage.alpha = 0.5
+            onboardImage.alpha = 1
             restartButton.isEnabled = true
             solutionButton.isEnabled = true
             startUpButton.isEnabled = false
@@ -772,7 +793,7 @@ class SpeedSolveViewController: UIViewController {
         startTimer.invalidate()
         gameTimer.invalidate()
         timeTakenTimer.invalidate()
-        startInt = 5
+        startInt = 3
         gameInt = 180
         timeTakenInt = 0
         tries = 0
